@@ -58,7 +58,7 @@ function checkGameOver() {
   if (s.x < 0 || s.y > width - scl) {
     gameOver();
     return true;
-  } else if (s.x < 0 || s.y > height - scl) {
+  } else if (s.x > height - scl || s.y < 0) {
     gameOver();
     return true;
   } else if (s.snakeCollision()) {

@@ -43,9 +43,6 @@ class Snake {
 
       this.x = this.x + this.xSpeed * scl;
       this.y = this.y + this.ySpeed * scl;
-
-      this.x = constrain(this.x, 0, width - scl);
-      this.y = constrain(this.y, 0, height - scl);
     };
 
     this.show = function () {
