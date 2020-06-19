@@ -6,7 +6,7 @@ allowing the line to grow. The game ends if the line hits itself or runs into th
 
 ## Getting Started
 
-In order to play, visit this website: `https://japonte21.github.io/snake-game/`
+In order to play, visit this website: https://japonte21.github.io/snake-game/
 
 If you would like to have a copy of the project to make your own desired edits:
 
