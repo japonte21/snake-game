@@ -44,6 +44,16 @@ function setup() {
   // starting location of the snake
   s.x = wd / 2;
   s.y = ht / 2;
+
+  let hammer = new Hammer(document.body, {
+    preventDefault: false,
+  });
+
+  hammer.get("swipe").set({
+    direction: Hammer.DIRECTION_ALL,
+  });
+
+  hammer.on("swipe", keyPressed);
 }
 
 // picks the location to place a token at the start and when one is eaten
@@ -156,22 +166,38 @@ function mousePressed() {
 // movements of the snake available
 function keyPressed() {
   if (!endGame) {
-    if (keyCode === UP_ARROW || keyCode === 87) {
+    if (
+      keyCode === UP_ARROW ||
+      keyCode === 87 ||
+      (event && event.direction == 8)
+    ) {
       if (s.ySpeed != 1) {
         upDownS.play();
         s.dir(0, -1);
       }
-    } else if (keyCode === DOWN_ARROW || keyCode === 83) {
+    } else if (
+      keyCode === DOWN_ARROW ||
+      keyCode === 83 ||
+      (event && event.direction == 16)
+    ) {
       if (s.ySpeed != -1) {
         upDownS.play();
         s.dir(0, 1);
       }
-    } else if (keyCode === LEFT_ARROW || keyCode === 65) {
+    } else if (
+      keyCode === LEFT_ARROW ||
+      keyCode === 65 ||
+      (event && event.direction == 2)
+    ) {
       if (s.xSpeed != 1) {
         leftRightS.play();
         s.dir(-1, 0);
       }
-    } else if (keyCode === RIGHT_ARROW || keyCode === 68) {
+    } else if (
+      keyCode === RIGHT_ARROW ||
+      keyCode === 68 ||
+      (event && event.direction == 4)
+    ) {
       if (s.xSpeed != -1) {
         leftRightS.play();
         s.dir(1, 0);
