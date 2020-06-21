@@ -7,9 +7,9 @@ point.
 
 ## Getting Started
 
-In order to play, visit this website: <https://japonte21.github.io/snake-game/>. The game supports movement using both the
-arrow keys, as well as the WASD keys. A sound is played each time the snake moves direction, collects a token, or when the game
-ends. Along with that, each time a token is picked up, the game speeds ups.
+In order to play, visit this website: <https://japonte21.github.io/snake-game/>. The game supports movement using the arrow
+keys, the WASD keys, and swiping on mobile. A sound is played each time the snake moves direction, collects a token, or when
+the game ends. Along with that, each time a token is picked up, the game speeds ups.
 
 If you would like to have a copy of the project to make your own desired edits:
 
@@ -21,5 +21,7 @@ This will allow you to have a copy of the project on your local machine availabl
 
 ### Prerequisites
 
-This project uses the [p5.js JavaScript library](https://p5js.org/download/) in order to draw and structure the game. In order
-to find out more about the library, be sure to visit the p5.js [website](https://p5js.org/).
+This project uses the [p5.js JavaScript library](https://p5js.org/download/) in order to draw and structure the game, and the
+[Hammer.js library](http://hammerjs.github.io/) for gesture recognition (primarily swiping on mobile). In order
+to find out more about these libraries, be sure to visit the p5.js [website](https://p5js.org/) and the
+[Hammer.js website](http://hammerjs.github.io/getting-started/).

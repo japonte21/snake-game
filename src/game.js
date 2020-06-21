@@ -45,6 +45,7 @@ function setup() {
   s.x = wd / 2;
   s.y = ht / 2;
 
+  // initializes support for touch controls
   let hammer = new Hammer(document.body, {
     preventDefault: false,
   });
@@ -164,7 +165,7 @@ function mousePressed() {
 }
 
 // movements of the snake available
-function keyPressed() {
+function keyPressed(event) {
   if (!endGame) {
     if (
       keyCode === UP_ARROW ||
